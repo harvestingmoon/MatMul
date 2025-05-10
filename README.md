@@ -39,6 +39,7 @@ This file presents two advanced approaches for GPU matrix multiplication: a cust
 
 
 * **Key Optimizations at Kernel Level:**
+
     * **Memory Coalescing:** Data is read from global memory in a way that allows threads within a warp to access contiguous memory locations, maximizing memory transaction efficiency
 
     * **Sequential Addressing:** Threads are organized to access memory sequentially where possible, further improving global memory access patterns
@@ -47,7 +48,7 @@ This file presents two advanced approaches for GPU matrix multiplication: a cust
 
 * **Performance Note:** Despite these optimizations, it was observed that this custom kernel might still only utilize a fraction (6%) of the GPU's theoretical maximum compute capability 
 
-## Hence, introducing CUBLAS
+
 
 #### Part B: CUBLAS Implementation
 
